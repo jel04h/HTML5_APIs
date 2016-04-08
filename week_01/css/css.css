@@ -1,0 +1,47 @@
+.container {
+  max-width: 700px;
+}
+
+header {
+  padding-bottom: 1em;
+  border-bottom: 1px solid #EEEEEE;
+}
+
+h2, h3, h4, h5 {
+  color: #444444;
+}
+
+p {
+  color: #6E6E6E;
+}
+
+.margin-top-15 {
+  margin-top: 1.9em;
+}
+
+.margin-top-2 {
+  margin-top: 2em;
+}
+
+.margin-top-3 {
+  margin-top: 3em;
+}
+
+.number-form {
+  align-content: center;
+  text-align: center;
+}
+
+table, thead, tr, th {
+  text-align: center;
+}
+
+th {
+  width: 20%;
+}
+
+footer {
+  margin-top: 3em;
+  padding-top: 1em;
+  border-top: 1px solid #EEEEEE;
+}

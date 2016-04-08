@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Number Form</title>
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/css.css">
+    
+  </head>
+  
+  <body>
+    <div class="container">
+      <header>
+        <ul class="nav nav-pills pull-right">
+          <li role="presentation"><a href="#">Home</a></li>
+          <li role="presentation" class="dropdown">
+            <a class="dropdown-toggle active-primary" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+              Weekly Assignments <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Week 1: Number Form</a></li>
+              <li><a href="#">Week 2: Assignment</a></li>
+              <li><a href="#">Week 3: Assignment</a></li>
+            </ul>
+          </li>
+          <li role="presentation"><a href="#">About</a></li>
+        </ul>
+        <h2 class="text-primary">Joan Williams</h2>
+        <div class="clear-fix"></div>
+      </header>
+
+      <main>
+        <article>
+          <h1 class="text-muted">Week 1: Number Form Assignment</h1>
+          <p>Create a web page with an input field where the user enters numbers. </p>
+          <p>Requirements: 1 input field for numbers only, 1 display for how many numbers have been entered, 1 display for the sum of the numbers, and 1 display of the average of these numbers. There should be a submit button as well as a reset button. If there is a non-numeric input, display an error message or otherwise prevent the non-numeric input. Optional features could be the standard deviation and/or median of the numbers entered. See <a href="https://canvas.uw.edu/courses/1044441/assignments/3164769">assignment</a>.</p>
+          <div class="clear-fix margin-top-2"></div>
+          <div class="panel panel-default number-form">
+            <div class="panel-heading">
+              <h1 class="panel-title">The Number Form</h1>
+            </div>
+            <div class="panel-body margin-top-15 text-center">
+              <form class="form-inline" role="form">
+                <div class="form-group">
+                  <label class="sr-only" for="exampleNumericalInput">138</label>
+                  <div class="input-group">
+                    <div class="input-group-addon">#</div>
+                    <input type="text" class="form-control input-lg" id="exampleNumericalInput" placeholder="138">
+                  </div>
+                </div>
+                <button type="submit" class="btn btn-default btn-lg">Submit</button>
+                <button type="reset" class="btn btn-default btn-lg">Reset</button>
+              </form>
+              <div class="table-responsive">
+                <table class="table table-bordered margin-top-3 table-hover">
+                  <thead>
+                    <tr>
+                      <th>Amount of Numbers</th>
+                      <th>Sum</th>
+                      <th>Mean</th>
+                      <th>Median</th>
+                      <th>Standard Deviation</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th>?</th>
+                      <th>?</th>
+                      <th>?</th>
+                      <th>?</th>
+                      <th>?</th>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="table-responsive">
+                <table class="table table-bordered margin-top-1 table-hover">
+                  <thead>
+                    <tr>
+                      <th>Numbers that have been submitted</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th>?</th>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              </div>
+            </div>
+          
+        </article>
+
+
+      </main>
+
+      <footer>
+        &copy; Joan Williams 2016 | <a href="https://github.com/jel04h">https://github.com/jel04h</a> | <a href="mailto:joanlinw@gmail.com">joanlinw@gmail.com</a> | <a href="https://www.pce.uw.edu/courses/application-programming-interfaces-apis">HTML5 Application-Programming Interfaces Class</a>, <a href="http://shielded-sea-3725.herokuapp.com/Lectures/Introduction.html">Instructor: David M. Anderson</a> | <a href="https://www.pce.uw.edu/">UW Continuing Education</a> | <a href="https://www.pce.uw.edu/certificates/html5-css3-responsive-design-web-development">HTML5 CSS3 Responsive Design & Web Development Certification</a>
+      </footer>
+
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="js/js.js"></script>
+  </body>
+</html>
