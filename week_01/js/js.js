@@ -3,13 +3,12 @@ var numberList = [];
 var sum = 0;
 
 document.getElementById("submit").addEventListener("click", onClick, false);
+document.getElementById("reset").addEventListener("click", onResetClick, false);
 
 function onClick(evt) {
   
-  var theNumber = parseInt(document.getElementById("myNumber").value);  
-  
-  if (theNumber != NaN) { 
-  
+  var theNumber = Number(document.getElementById("myNumber").value);
+    
     numberList.push(theNumber);
 
     document.getElementById("submittedSubmissions").innerHTML = numberList.toString();
@@ -25,10 +24,19 @@ function onClick(evt) {
     document.getElementById("medianSubmissions").innerHTML = math.median(numberList);
     
     document.getElementById("stdDevSubmissions").innerHTML = math.std(numberList);
-    
-  }   
-  
+ 
 }
+  
+  function onResetClick(evt) {
+    document.getElementById("submittedSubmissions").innerHTML = "";
+    document.getElementById("numberSubmissions").innerHTML = "";
+    document.getElementById("sumSubmissions").innerHTML = "";
+    document.getElementById("meanSubmissions").innerHTML = "";
+    document.getElementById("medianSubmissions").innerHTML = "";
+    document.getElementById("stdDevSubmissions").innerHTML = "";
+    numberList = [];
+    sum = 0;
+  }
 
 
 
