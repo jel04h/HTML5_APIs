@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Joan Williams | HTML5 300 Assignments: Number Form</title>
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../week_01/css/css.css">
+    
+  </head>
+  
+  <body>
+    <div class="container">
+      <header>
+        <ul class="nav nav-pills pull-right">
+          <li role="presentation"><a href="../index.html">Home</a></li>
+          <li role="presentation" class="dropdown">
+            <a class="dropdown-toggle active-primary" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+              Weekly Assignments <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="../week_01/number_form.html">Week 1: Number Form</a></li>
+              <li><a href="object_list.html">Week 2: Object List</a></li>
+              <li><a href="#">Week 3: Assignment</a></li>
+            </ul>
+          </li>
+          <li role="presentation"><a href="../about.html">About Joan</a></li>
+        </ul>
+        <h2 class="text-primary"><a href="../index.html">Joan Williams</a></h2>
+        <div class="clear-fix"></div>
+      </header>
+
+      <main>
+        <article>
+          <h1 class="text-muted">Week 2: Object List Assignment</h1>
+          <p>Create a Web site that manages a simple in-memory database. The database will be a list (array) of objects. Create a table that shows the objects. Create a form that populates the table.</p>
+          <p>Requirements: Two Divs: 1st Div [table with columns to house the database, have an "add object" button] 2nd Div (access when you click the "add object" button, hidden before) [form with input fields with the properties of the object, submit button to add the properties, cancel button, both buttons hide the form and go back to the table], the submit button will add the info to the table. See <a href="https://shielded-sea-3725.herokuapp.com/Assignments/Assignment_2.html">assignment</a>.</p>
+          
+          <div class="clear-fix margin-top-2"></div>
+          
+          <div class="panel panel-default object-list">
+            <div class="panel-heading">
+              <h1 class="panel-title">The Object List</h1>
+            </div>
+            
+            <div class="panel-body margin-top-1 text-center">
+              <p>Dogs you know and their basic information</p>
+              <table class="table table-bordered table-hover">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Owner</th>
+                    <th>Breed</th>
+                    <th>Age</th>
+                  </tr>
+                </thead>
+                <tbody id="dogTable">
+                  <!--<tr>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                  </tr>-->
+                </tbody>
+              </table>
+              <input type="button" value="Add a dog" id="addDog" class="btn btn-default" />
+              
+              <div id="dogForm" class="well margin-top-3">
+        
+                <h3 class="text-muted margin-top-0">Add a dog here:</h3>
+                <p>Type in the fantasticly awesome dog's info in the spaces below and hit submit to push the information to the table above.</p>
+
+                <div class="row">
+                  <div class="col-sm-6 margin-top-12">
+                    <div class="input-group">
+                      <span class="input-group-addon">Dog's Name</span>
+                      <input type="text" id="addName" class="form-control input" />
+                    </div>
+                  </div>
+                  <div class="col-sm-6 margin-top-12">
+                    <div class="input-group">
+                      <span class="input-group-addon">Dog's Owner</span>
+                      <input type="text" id="addOwner" class="form-control input" />
+                    </div>
+                  </div>
+                </div>  
+                <div class="row">
+                  <div class="col-sm-6 margin-top-12">
+                    <div class="input-group">
+                      <span class="input-group-addon">Dog's Breed</span>
+                      <input type="text" id="addBreed" class="form-control input" />
+                    </div>
+                  </div>
+                  <div class="col-sm-6 margin-top-12">
+                    <div class="input-group">
+                      <span class="input-group-addon">Dog's Age</span>
+                      <input type="text" id="addAge" class="form-control input" />
+                    </div>
+                  </div>
+                </div>  
+                
+                <div class="row margin-top-2">
+                  <p class="text-danger" id="alert"></p>
+                  <input type="button" value="Submit this dog" id="submitDog" class="btn btn-default" />
+                  <input type="button" value="Cancel" id="cancelDog" class="btn btn-default" />
+                </div>
+                  
+              </div>
+              
+            
+            </div>
+          </div>
+          
+        </article>
+
+      </main>
+
+      <footer>
+        &copy; Joan Williams 2016 | <a href="https://github.com/jel04h">https://github.com/jel04h</a> | <a href="mailto:joanlinw@gmail.com">joanlinw@gmail.com</a> | <a href="https://www.pce.uw.edu/courses/application-programming-interfaces-apis">HTML5 Application-Programming Interfaces Class</a>, <a href="http://shielded-sea-3725.herokuapp.com/Lectures/Introduction.html">Instructor: David M. Anderson</a> | <a href="https://www.pce.uw.edu/">UW Continuing Education</a> | <a href="https://www.pce.uw.edu/certificates/html5-css3-responsive-design-web-development">HTML5 CSS3 Responsive Design and Web Development Certification</a> | <a href="https://www.linkedin.com/in/mwillia">I also happened to be married to a Software Engineer...</a>
+      </footer>
+
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="js/js.js"></script>
+  </body>
+</html>
