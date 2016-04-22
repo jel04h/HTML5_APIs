@@ -64,19 +64,19 @@
     for (var i=0; i < dogArray.length; i++) {
       var row = document.createElement("tr");
       
-      var nameCol = document.createElement("th");
+      var nameCol = document.createElement("td");
       var nameText = document.createTextNode(dogArray[i].dogName);
       nameCol.appendChild(nameText);
       
-      var ownerCol = document.createElement("th");
+      var ownerCol = document.createElement("td");
       var ownerText = document.createTextNode(dogArray[i].dogOwner);
       ownerCol.appendChild(ownerText);
 
-      var breedCol = document.createElement("th");
+      var breedCol = document.createElement("td");
       var breedText = document.createTextNode(dogArray[i].dogBreed);
       breedCol.appendChild(breedText);
 
-      var ageCol = document.createElement("th");
+      var ageCol = document.createElement("td");
       var ageText = document.createTextNode(dogArray[i].dogAge);
       ageCol.appendChild(ageText);
       
@@ -87,7 +87,6 @@
       
       table.appendChild(row);
     }
-
       
   }
               
@@ -113,6 +112,7 @@
   //onCancelClick
   function onCancelClick(evt) {
     clearForm();
+    document.getElementById("dogForm").style.display = "none";
   }
               
   //making the 'submit this dog' button work...??
