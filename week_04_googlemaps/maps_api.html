@@ -1,0 +1,109 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Joan Williams | HTML5 300 Assignments: Number Form</title>
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
+    <link rel="stylesheet" type="text/css" href="../week_01/css/css.css">
+    
+  </head>
+   
+  <body>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAB6mqerqq9G9lgsADsA0nOPXq8hxcjKho&callback=initMap"
+    async defer></script>
+    <div class="container">
+      <header>
+        <ul class="nav nav-pills pull-right">
+          <li role="presentation"><a href="../index.html">Home</a></li>
+          <li role="presentation" class="dropdown">
+            <a class="dropdown-toggle active-primary" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Weekly Assignments <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="../week_01/number_form.html">Week 1: Number Form</a></li>
+              <li><a href="../week_02/object_list.html">Week 2: Object List</a></li>
+              <li><a href="../week_02_arrays/object_list.html">Week 2: Object List (Array)</a></li>
+              <li><a href="../week_03/numbers_strings.html">Week 3: Numbers and Strings</a></li>
+              <li><a href="../week_04/maps_api.html">Week 4: Map APIs</a></li>
+              <li><a href="maps_api.html">Week 4: Map APIs (Google Maps)</a></li>
+              <li><a href="#">Week 5: </a></li>
+              <li><a href="#">Week 6: </a></li>
+            </ul>
+          </li>
+          <li role="presentation"><a href="../about.html">About Joan</a></li>
+        </ul>
+        <h2 class="text-primary"><a href="../index.html">Joan Williams</a></h2>
+        <div class="clear-fix"></div>
+      </header>
+
+      <main>
+        <article>
+          <div class="row">
+            <h1 class="text-muted">Week 4: Map APIs</h1>
+            <p>Create a Web page with a map, either static or slippy, using the API of your choice.</p>
+            <p>Create a little form that allows the user to choose the location and zoom level. This could be input boxes for entering latitude, longitude, and zoom. Or it could be a menu (select, radio buttons, or something similar) of places you find interesting. When the user chooses a location, change the map accordingly. If you are using a slippy map, there are built-in functions to do this. If a static map, build the new URL string and use jQuery's attr() function to set the src attribute.. See <a href="https://shielded-sea-3725.herokuapp.com/Assignments/Assignment_4.html">assignment</a> and <a href="https://shielded-sea-3725.herokuapp.com/Lectures/Maps.html">lecture</a>.</p>
+
+            <div class="clear-fix margin-top-2"></div>
+
+            <div class="panel panel-default object-list">
+              <div class="panel-heading">
+                <h1 class="panel-title">Google Maps APIs</h1>
+              </div>
+
+              <div class="panel-body margin-top-0 text-center">
+
+                <h2>Where in the world do you want to go?</h2>
+                <p>Some suggestions:</p>
+                <p>
+                  <input type="button" value="Taipei, Taiwan" id="taipeiTaiwan" class="btn btn-default btn-places" /> 
+                  <input type="button" value="Reykjavik, Iceland" id="iceland" class="btn btn-default btn-places" /> 
+                  <input type="button" value="Tokyo, Japan" id="tokyoJapan" class="btn btn-default btn-places" /> 
+                  <input type="button" value="Paris, France" id="parisFrance" class="btn btn-default btn-places" />
+                </p>
+                
+                <div><small><p class="text-muted" id="place-description"></p></small></div>
+                <div id="google-map"></div>
+                
+                <!--
+                <h3>Or you can input your own coordinates:</h3>
+                <form class="form-inline">
+                  <div class="form-group">
+                    <input type="number" class="form-control col-sm-4" id="inputLatitude" placeholder="Latitude"> 
+                  </div>
+                  <div class="form-group">
+                    <input type="number" class="form-control col-sm-4" id="inputLongitude" placeholder="Longitude">
+                  </div>
+                  <div class="form-group">
+                    <input type="button" value="Let's Go!" id="goToLocation" class="btn btn-default" />
+                  </div>
+                </form>
+                -->
+
+                <div class="clearfix"></div>
+
+              </div>
+              
+              <div class="panel-footer">
+                <p class="small text-center">Just fyi, this map uses the <a href="https://developers.google.com/maps/documentation/javascript/tutorial">Google Maps API</a>.</p>
+              
+              </div>
+            </div>
+
+          </div>
+        </article>
+
+      </main>
+
+      <footer>
+        &copy; Joan Williams 2016 | <a href="https://github.com/jel04h">https://github.com/jel04h</a> | <a href="mailto:joanlinw@gmail.com">joanlinw@gmail.com</a> | <a href="https://www.pce.uw.edu/courses/application-programming-interfaces-apis">HTML5 Application-Programming Interfaces Class</a>, <a href="http://shielded-sea-3725.herokuapp.com/Lectures/Introduction.html">Instructor: David M. Anderson</a> | <a href="https://www.pce.uw.edu/">UW Continuing Education</a> | <a href="https://www.pce.uw.edu/certificates/html5-css3-responsive-design-web-development">HTML5 CSS3 Responsive Design and Web Development Certification</a> | <a href="https://www.linkedin.com/in/mwillia">I also happened to be married to a Software Engineer...</a>
+      </footer>
+
+    </div>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="js/js.js"></script>
+  </body>
+</html>

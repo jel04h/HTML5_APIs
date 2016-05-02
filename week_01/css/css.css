@@ -44,10 +44,17 @@ table, thead, tr, th {
   text-align: center;
 }
 
-
-
 footer {
   margin-top: 3em;
   padding-top: 1em;
   border-top: 1px solid #EEEEEE;
 }
+
+.btn-places {
+  background-color: #DBE6BC;
+  margin-bottom: 7px;
+}
+
+#mapid { height: 380px; } 
+
+#google-map { height: 380px; } 
