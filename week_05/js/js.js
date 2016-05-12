@@ -25,6 +25,8 @@
     flowerColor();
     datePicker();
     email();
+    password();
+    range();
     radioButtons();
 
               
@@ -48,9 +50,13 @@
     password();
   });
               
-  $("#radioDiv input[name=climbingVegs]:checked").change(function() {
+  $("#radioDiv input[name=climbingVegs]").change(function() {
     radioButtons();
-  });              
+  });
+              
+  $("#flowerNumber").change(function() {
+    range();
+  });            
               
   function herbCheckbox() {
     if($('#basil').is(':checked')) {
@@ -72,7 +78,6 @@
                             
   function flowerColor() {
     $("#colorAnswer").text($("#color").val());
-    
   }
               
   function datePicker() {
