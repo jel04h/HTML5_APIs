@@ -1,0 +1,159 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Joan Williams | HTML5 300 Assignments: Number Form</title>
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../week_01/css/css.css">
+    
+  </head>
+   
+  <body>
+    <div class="container">
+      <header>
+        <ul class="nav nav-pills pull-right">
+          <li role="presentation"><a href="../index.html">Home</a></li>
+          <li role="presentation" class="dropdown">
+            <a class="dropdown-toggle active-primary" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Weekly Assignments <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="../week_01/number_form.html">Week 1: Number Form</a></li>
+              <li><a href="../week_02/object_list.html">Week 2: Object List</a></li>
+              <li><a href="../week_02_arrays/object_list.html">Week 2: Object List (Array)</a></li>
+              <li><a href="../week_03/numbers_strings.html">Week 3: Numbers and Strings</a></li>
+              <li><a href="../week_04/maps_api.html">Week 4: Map APIs</a></li>
+              <li><a href="../week_04_googlemaps/maps_api.html">Week 4: Map APIs (Google Maps)</a></li>
+              <li><a href="week5.html">Week 5: Inputs and Drag-and-Drop</a></li>
+              <li><a href="#">Week 6: </a></li>
+            </ul>
+          </li>
+          <li role="presentation"><a href="../about.html">About Joan</a></li>
+        </ul>
+        <h2 class="text-primary"><a href="../index.html">Joan Williams</a></h2>
+        <div class="clear-fix"></div>
+      </header>
+
+      <main>
+        <article>
+          <div class="row">
+            <h1 class="text-muted">Week 5: Inputs and Drag-and-Drop</h1>
+            <p><strong>Inputs: </strong>Make a table for different kinds of input elements. (This includes not just input elements per se, but also textarea and select.) In the first column, show type of input (e.g. 'input type="checkbox"'). In the second column, put an actual element of that type. The third column is for the values entered by the user.</p>
+            <p>Your JavaScript should read and display the initial value for each input, and then handle the change event for the inputs by displaying the new value. For most inputs, you can use jQuery's val() method. An exception is checkboxes, for which you can use jQuery's prop() method. See <a href="http://shielded-sea-3725.herokuapp.com/Assignments/Assignment_5.html">assignment</a>.</p>
+            
+            <p><strong>Drag-and-Drop: </strong>Make a page where the user can drag a couple of elements around with a mouse. Make a large div (with relative position) and put some smaller elements (with absolute position) inside of it. Set a handler for the mousedown event on those draggable elements. It should have a variable that holds the event target (the element that was clicked on). It should also get the difference between the position of that element (its left and top CSS settings) and the mouse (the event's pageX and pageY in jQuery).</p>
+            <p>That event handler should then set event handlers for two other events: A mousemove handler should update the element's position so that the difference between that and the mouse's new position stays constant. A mouseup handler should remove those two event handlers so dragging finishes. (With jQuery, use the off method.) These handlers should be set on the entire document, rather than the target element. See <a href="http://shielded-sea-3725.herokuapp.com/Assignments/Assignment_5.html">assignment</a>.</p>
+
+            <div class="clear-fix margin-top-2"></div>
+
+            <div class="panel panel-default object-list">
+              <div class="panel-heading">
+                <h1 class="panel-title">Inputs</h1>
+              </div>
+
+              <div class="panel-body margin-top-0 text-center">
+
+                <h2>Input your inputs below to display beside.</h2>
+                
+                  <table id="inputs" class="margin-top-2 table table-striped table-bordered table-hover table-responsive">
+                    <thead>
+                      <tr>
+                        <th>Type of input</th>
+                        <th>Please input your inputs</th>
+                        <th>Values entered</th>
+                      </tr>
+                    </thead>
+                    <tr>
+                      <td>Checkbox</td>
+                      <td>
+                        <form id="checkboxForm" action="">
+                          <input type="checkbox" id="basil" name="herb" value="Basil">Basil, 
+                          <input type="checkbox" id="rosemary" name="herb" value="Rosemary">Rosemary, and/or 
+                          <input type="checkbox" id="thyme" name="herb" value="Thyme">Thyme
+                        </form>
+                      </td>
+                      <td><p id="basilAnswer"></p><p id="rosemaryAnswer"></p><p id="thymeAnswer"></p></td>
+                    </tr>
+                    <tr>
+                      <td>Color</td>
+                      <td>
+                        <form>
+                          What color flower? <input type="color" id="color" value="#0082C4" /> 
+                        </form>
+                      </td>
+                      <td><p id="colorAnswer"></p></td>
+                    </tr>
+                    <tr>
+                      <td>Date</td>
+                      <td>When? <input type="date" id="date" name="when" value="2016-11-12" /></td>
+                      <td><p id="dateAnswer"></p></td>
+                    </tr>
+                    <tr>
+                      <td>Email</td>
+                      <td>Email: <input type="email" id="email" value="your@email.com" /></td>
+                      <td><p id="emailAnswer"></p></td>
+                    </tr>
+                    <tr>
+                      <td>Password</td>
+                      <td>Password: <input type="password" id="password" value="123456789" maxlength="12" /></td>
+                      <td><p id="passwordAnswer"></p></td>
+                    </tr>
+                    <tr>
+                      <td>Radio</td>
+                      <td>
+                        <div id="radioDiv" class="radio">
+                          <label>
+                            <input type="radio" name="climbingVegs" id="climbingVegs1" value="Eggplant">
+                            Eggplant, 
+                          </label>
+                          <label>
+                            <input type="radio" name="climbingVegs" id="climbingVegs2" value="Cucumbers" checked />
+                            Cucumbers, or 
+                          </label>
+                          <label>
+                            <input type="radio" name="climbingVegs" id="climbingVegs3" value="Green Beans">
+                            Green Beans
+                          </label>
+                        </div>
+                      </td>
+                      <td><p id="radioAnswer"></p></td>
+                    </tr>
+                    <tr>
+                      <td>Range</td>
+                      <td><form><input id="flowerNumber" type="range" name="flowerNumber" min="0" max="100"></form></td>
+                      <td><p id="flowerNumberAnswer"></p></td>
+                    </tr>
+
+                  </table>
+                
+<!--
+                  <p class="text-danger" id="textAlert"></p>
+                  <input class="btn btn-default" id="submit" type="submit" value="Submit"> <input class="btn btn-default" id="reset" type="reset" value="Reset">
+-->
+
+                <div class="clearfix"></div>
+
+              </div>
+              
+              <div class="panel-footer margin-top-2">
+                <p class="small text-center">Inputs available to HTML: <a href="http://www.w3schools.com/tags/tag_input.asp" target="_blank">W3S</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input">Mozilla Dev</a>.</p>
+              </div>
+            </div>
+
+          </div>
+        </article>
+
+      </main>
+
+      <footer>
+        &copy; Joan Williams 2016 | <a href="https://github.com/jel04h">https://github.com/jel04h</a> | <a href="mailto:joanlinw@gmail.com">joanlinw@gmail.com</a> | <a href="https://www.pce.uw.edu/courses/application-programming-interfaces-apis">HTML5 Application-Programming Interfaces Class</a>, <a href="http://shielded-sea-3725.herokuapp.com/Lectures/Introduction.html">Instructor: David M. Anderson</a> | <a href="https://www.pce.uw.edu/">UW Continuing Education</a> | <a href="https://www.pce.uw.edu/certificates/html5-css3-responsive-design-web-development">HTML5 CSS3 Responsive Design and Web Development Certification</a> | <a href="https://www.linkedin.com/in/mwillia">I also happened to be married to a Software Engineer...</a>
+      </footer>
+
+    </div>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="js/js.js"></script>
+  </body>
+</html>

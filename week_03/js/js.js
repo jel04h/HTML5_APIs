@@ -30,7 +30,7 @@
       console.log( "It's a string." ); //checking to see what the computer thinks is a string
       strings.push(input);  // pushes the "input" onto the end of the strings array. ".push" is a function to add something to the end of an array.
       var currentText = ""; //starts the currentText off with nothing (an empty string), basically resetting it
-      
+       
       //this is a for loop
       for (var i = 0; i < strings.length; i++) {
       // ("var i = 0" means the first i starts at zero; "i < strings.length; i++" the next i will be i++ which means i+1) if this isn't here then you can't use the for loop or the "[i]" anything.
