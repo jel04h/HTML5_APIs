@@ -58,3 +58,8 @@ footer {
 #mapid { height: 380px; } 
 
 #google-map { height: 380px; } 
+
+#inputs table, thead, tr, th {
+  text-align: left !important;
+  
+}
