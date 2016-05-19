@@ -63,3 +63,8 @@ footer {
   text-align: left !important;
   
 }
+
+#wishReceived {
+  margin-top: .5em;
+  margin-bottom: 0;
+}

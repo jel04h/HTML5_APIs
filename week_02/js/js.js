@@ -48,7 +48,7 @@
     console.log(inputDog);
     console.log(cDog);
     //it works!
-    
+     
     addTableRow(inputDog);
     
   }

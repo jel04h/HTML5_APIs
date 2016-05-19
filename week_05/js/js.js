@@ -28,7 +28,6 @@
     password();
     range();
     radioButtons();
-
               
   $("input[name=herb]").change(function() {
     herbCheckbox();
@@ -75,14 +74,13 @@
       $('#thymeAnswer').text("No to Thyme.")
     };
   }
-                            
+                             
   function flowerColor() {
     $("#colorAnswer").text($("#color").val());
   }
               
   function datePicker() {
-    $("#dateAnswer").text($("#date").val());
-    
+    $("#dateAnswer").text($("#date").val());   
   }
               
   function email() {
@@ -101,10 +99,6 @@
     $("#flowerNumberAnswer").text($("#flowerNumber").val());
   }
 
-
-              
-              
-   
   function getDate() {
     var theDate = document.getElementById("date").value
   }        
@@ -125,16 +119,5 @@
     $( 'input[name=flowerNumber]' ).val( "50" );
     $( '#textAlert ').text( "Form has been reset." );
   });           
-             
-  
-
-
-             
-             
-             
-             
-             
-             
-             
-             
+                      
 }()); 

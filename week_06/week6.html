@@ -1,0 +1,268 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Joan Williams | HTML5 300 Assignments: Number Form</title>
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../week_01/css/css.css">
+    
+  </head>
+   
+  <body>
+    <div class="container">
+      <header>
+        <ul class="nav nav-pills pull-right">
+          <li role="presentation"><a href="../index.html">Home</a></li>
+          <li role="presentation" class="dropdown">
+            <a class="dropdown-toggle active-primary" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Weekly Assignments <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="../week_01/number_form.html">Week 1: Number Form</a></li>
+              <li><a href="../week_02/object_list.html">Week 2: Object List</a></li>
+              <li><a href="../week_02_arrays/object_list.html">Week 2: Object List (Array)</a></li>
+              <li><a href="../week_03/numbers_strings.html">Week 3: Numbers and Strings</a></li>
+              <li><a href="../week_04/maps_api.html">Week 4: Map APIs</a></li>
+              <li><a href="../week_04_googlemaps/maps_api.html">Week 4: Map APIs (Google Maps)</a></li>
+              <li><a href="week5.html">Week 5: Inputs and Drag-and-Drop</a></li>
+              <li><a href="#">Week 6: RESTful Data API</a></li>
+            </ul>
+          </li>
+          <li role="presentation"><a href="../about.html">About Joan</a></li>
+        </ul>
+        <h2 class="text-primary"><a href="../index.html">Joan Williams</a></h2>
+        <div class="clear-fix"></div>
+      </header>
+
+      <main>
+        <article>
+          <div class="row">
+            <h1 class="text-muted">Week 6: RESTful Data API</h1>
+            <p><strong>RESTful Data API: </strong>This week you will use the RESTful data API that I set up for you. But you have a choice: you can either make a page with separate forms for the CRUD operations, or you can implement a more polished app with a table and a single form. You can use the same objects you used for the the Object List assignment, with the same properties, or choose something new for your database.</p>
+            <p><strong>REST Forms:</strong> Create a Web page with separate forms for each of the basic database operations, similar to the ones used in the lecture. You'll need forms for creating, reading, updating, and deleting and item. You should also have a button for listing all of the items. For each of the forms and button, the event handler should make the appropriate AJAX call. You can use console.log() to show the results, but it would be better to display them on the Web page as well. See <a href="http://shielded-sea-3725.herokuapp.com/Assignments/Assignment_6.html">assignment</a>.</p>
+            
+            <p><strong>REST App: </strong>Create a Web app like the one for the Object List assignment with a table for the items and a form for creating and editing them. The only difference is that instead of keeping the database in an array in your app's memory, you will use the RESTful API to create items and list them. See <a href="http://shielded-sea-3725.herokuapp.com/Assignments/Assignment_5.html">assignment</a>.</p>
+
+            <div class="clear-fix margin-top-2"></div>
+
+            <div class="panel panel-default object-list text-left">
+              <div class="panel-heading">
+                <h1 class="panel-title">REST Forms</h1>
+              </div>
+
+              <div class="panel-body margin-top-0 text-center">
+
+                <h2 class="text-left">Data for the database! Yum!</h2>
+                
+                <div class="row margin-top-2 text-left">
+                  <div class="col-sm-6">
+                    <div class="panel panel-default">
+                      <div class="panel-heading">
+                        <h3 class="panel-title">Input your Data!</h3>
+                      </div>
+                      <div class="panel-body text-left">
+                        <form class="form-horizontal">
+                          <div class="form-group">
+                            <label for="inputWish" class="col-sm-2 control-label">Wish:</label>
+                            <div class="col-sm-10">
+                              <input type="text" class="form-control" id="inputWish" placeholder="Just a hope!">
+                            </div>
+                          </div>
+                          <div class="form-group" id="radioDivInput">
+                            <div class="col-sm-offset-2 col-sm-10">
+                              <div class="radio">
+                                <label>
+                                <input type="radio" name="optionsRadios" id="high" value="High Priority" checked>
+                                High
+                                </label>
+                              </div>
+                              <div class="radio">
+                                <label>
+                                <input type="radio" name="optionsRadios" id="med" value="Medium Priority" checked>
+                                Med
+                                </label>
+                              </div>
+                              <div class="radio">
+                                <label>
+                                <input type="radio" name="optionsRadios" id="low" value="Low Priority" checked>
+                                Low
+                                </label>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-10">
+                              <button type="submit" id="create-submit" class="btn btn-default">Input Wish</button>
+                              <p class="text-danger" id="wishReceived"></p>
+                            </div>
+                            
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                    <div class="panel panel-success">
+                      <div class="panel-heading">
+                        <h3 class="panel-title">Update your Data</h3>
+                      </div>
+                      <div class="panel-body">
+                        <p>Maybe your wish changed a little?</p>
+                        <form class="form-horizontal">
+                          <div class="form-group">
+                            <label for="inputWish" class="col-sm-2 control-label">id:</label>
+                            <div class="col-sm-10">
+                              <input type="text" class="form-control" id="updateSearchId" placeholder="XXxxxXXXXxxXXXXXxx">
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <label for="updateWish" class="col-sm-2 control-label">Wish:</label>
+                            <div class="col-sm-10">
+                              <input type="text" class="form-control" id="updateWish" placeholder="Just a hope!">
+                            </div>
+                          </div>
+                          <div id="radioDivSearch" class="form-group">
+                            <div class="col-sm-offset-2 col-sm-10">
+                              <div class="radio">
+                                <label>
+                                <input type="radio" name="optionsRadiosUpdate" id="highUpdate" value="High Priority" checked>
+                                High
+                                </label>
+                              </div>
+                              <div class="radio">
+                                <label>
+                                <input type="radio" name="optionsRadiosUpdate" id="medUpdate" value="Medium Priority" checked>
+                                Med
+                                </label>
+                              </div>
+                              <div class="radio">
+                                <label>
+                                <input type="radio" name="optionsRadiosUpdate" id="lowUpdate" value="Low Priority" checked>
+                                Low
+                                </label>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-10">
+                              <button id="update" type="sumbit" class="btn btn-default">Update Wish</button>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                    <div class="panel panel-danger">
+                      <div class="panel-heading">
+                        <h3 class="panel-title">Delete your Data</h3>
+                      </div>
+                      <div class="panel-body">
+                        <p>Don't want that wish anymore?</p>
+                        <form class="form-horizontal">
+                          <div class="form-group">
+                            <label for="inputWish" class="col-sm-2 control-label">id:</label>
+                            <div class="col-sm-10">
+                              <input type="text" class="form-control" id="deleteSearchId" placeholder="XXxxxXXXXxxXXXXXxx">
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-10">
+                              <button id="deleteButton" type="submit" class="btn btn-default">Delete Wish</button>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="panel panel-info">
+                      <div class="panel-heading">
+                        <h3 class="panel-title">Search for the Data</h3>
+                      </div>
+                      <div class="panel-body">
+                        <form class="form-inline">
+                          <div class="form-group">
+                            <p><label for="id">Search by id:</label></p>
+                            <input type="text" class="form-control" id="dataId" placeholder="XXXXXxxxXXXXXxX">
+                          </div>
+                          <p><button id="searchButton" type="submit" class="btn btn-default margin-top-12">Search</button></p>
+                        </form>
+                      </div>
+                      <table class="table table-bordered table-hover">
+                        <thead>
+                          <tr>
+                            <th colspan="2">Wish</th>
+                          </tr>
+                          <tr>
+                            <td>Priority</td>
+                            <td>Wish ID</td>
+                          </tr>
+                        </thead>
+                        <tbody id="searchTable">
+                          <!--<tr>
+                            <th colspan="2"></th>
+                          </tr>
+                          <tr>
+                            <th></th>
+                            <th></th>
+                          </tr>-->
+                        </tbody>
+                      </table>
+
+                    </div>
+                    <div class="panel panel-warning">
+                      <div class="panel-heading">
+                        <h3 class="panel-title">List of the Data</h3>
+                      </div>
+                      <div class="panel-body">
+                        <p><input class="btn btn-default" id="retrieve" type="button" value="See your wishes listed!"></p>
+                        <p>Just click the button and see them below</p>
+                      </div>
+                      <table class="table table-bordered table-hover">
+                        <thead>
+                          <tr>
+                            <th colspan="2">Wish</th>
+                          </tr>
+                          <tr>
+                            <td>Priority</td>
+                            <td>Wish ID</td>
+                          </tr>
+                        </thead>
+                        <tbody id="listTable">
+                          <!--<tr>
+                            <th colspan="2"></th>
+                          </tr>
+                          <tr>
+                            <th></th>
+                            <th></th>
+                          </tr>-->
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+                  
+
+                <div class="clearfix"></div>
+
+              </div>
+              
+              <div class="panel-footer margin-top-2">
+                <p class="small text-center">Database was created by our lecturer on MongoDB.</p>
+              </div>
+            </div>
+
+          </div>
+        </article>
+
+      </main>
+
+      <footer>
+        &copy; Joan Williams 2016 | <a href="https://github.com/jel04h">https://github.com/jel04h</a> | <a href="mailto:joanlinw@gmail.com">joanlinw@gmail.com</a> | <a href="https://www.pce.uw.edu/courses/application-programming-interfaces-apis">HTML5 Application-Programming Interfaces Class</a>, <a href="http://shielded-sea-3725.herokuapp.com/Lectures/Introduction.html">Instructor: David M. Anderson</a> | <a href="https://www.pce.uw.edu/">UW Continuing Education</a> | <a href="https://www.pce.uw.edu/certificates/html5-css3-responsive-design-web-development">HTML5 CSS3 Responsive Design and Web Development Certification</a> | <a href="https://www.linkedin.com/in/mwillia">I also happened to be married to a Software Engineer...</a>
+      </footer>
+
+    </div>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="js/js.js"></script>
+  </body>
+</html>
