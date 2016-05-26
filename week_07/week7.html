@@ -1,0 +1,126 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Joan Williams | HTML5 300 Assignments: Local Storage</title>
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../week_01/css/css.css">
+    
+  </head>
+   
+  <body>
+    <div class="container">
+      <header>
+        <ul class="nav nav-pills pull-right">
+          <li role="presentation"><a href="../index.html">Home</a></li>
+          <li role="presentation" class="dropdown">
+            <a class="dropdown-toggle active-primary" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Weekly Assignments <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="../week_01/number_form.html">Week 1: Number Form</a></li>
+              <li><a href="../week_02/object_list.html">Week 2: Object List</a></li>
+              <li><a href="../week_02_arrays/object_list.html">Week 2: Object List (Array)</a></li>
+              <li><a href="../week_03/numbers_strings.html">Week 3: Numbers and Strings</a></li>
+              <li><a href="../week_04/maps_api.html">Week 4: Map APIs</a></li>
+              <li><a href="../week_04_googlemaps/maps_api.html">Week 4: Map APIs (Google Maps)</a></li>
+              <li><a href="../week_05/week5.html">Week 5: Inputs and Drag-and-Drop</a></li>
+              <li><a href="../week_06/week6.html">Week 6: RESTful Data API</a></li>
+              <li><a href="week7.html">Week 7: Local Storage</a></li>
+            </ul>
+          </li>
+          <li role="presentation"><a href="../about.html">About Joan</a></li>
+        </ul>
+        <h2 class="text-primary"><a href="../index.html">Joan Williams</a></h2>
+        <div class="clear-fix"></div>
+      </header>
+
+      <main>
+        <article>
+          <div class="row">
+            <h1 class="text-muted">Week 7: Local Storage</h1>
+            <p>This week you will use localStorage. You have a choice: use localStorage for a simple setting or two entered by the user, or use it to store a local database for an app like the Object List and Rest Data API apps from earlier assignments.</p>
+            <p><strong>Local Storage Settings:</strong> Create a Web page with two divs, one of which will be shown at a time. Call the first "hello-page" and the second "form-page". The Hello page should have some text like "Hello, ", and a span where the user's name will be inserted. It should also have two buttons, one for editing the settings, and one for removing them.</p>
+            <p>The Form page will have a form for entering "settings". For this exercise, the only setting can be the user's name. In your JavaScript, try to read the settings as localStorage[ "LSS_Settings" ]. If you get a string, use JSON.parse() to convert it into an object, say settings. If that object has a non-empty name property, show the Hello page and fill in the user's name.</p>
+            <p>If the settings value you read is undefined, or has no name property, then show the Form page. When the user submits the form, update the settings.name property and use JSON.stringify() to make settings into a string and set localStorage[ "LSS_Settings" ] to that string to save it. Then show the Hello page. As mentioned, the Hello page should have buttons for editing and removing the settings. See <a href="https://shielded-sea-3725.herokuapp.com/Assignments/Assignment_7.html">assignment</a>.</p>
+
+
+            <div class="clear-fix margin-top-2"></div>
+
+            <div class="panel panel-default object-list text-left">
+              <div class="panel-heading">
+                <h1 class="panel-title">Local Storage</h1>
+              </div>
+
+              <div class="panel-body margin-top-0 text-center">
+
+                <h2 class="text-left">Make a zoo!</h2>
+                
+                <table class="table table-striped table-responsive margin-top-2">
+                  <thead>
+                    <th>Animal</th>
+                    <th>Quanity</th>
+                    <th>Options</th>
+                  </thead>
+                  <tr>
+                    <td>Zebra</td>
+                    <td>20</td>
+                    <td><input class="btn btn-default" type="button" value="Edit"> <input class="btn btn-default" type="button" value="Delete"></td>
+                  </tr>
+                </table>
+                
+                <div class="text-left">
+                  <input class="btn btn-default" type="button" name="toggleAdd" id="addAnimalToggle" value="Click to add an animal!"> <input class="btn btn-default" type="button" name="toggleCancle" id="cancelAnimalToggle" value="Cancel request...">
+                </div>
+                  
+                <div id="inputAddForm" class="hidden">
+                  <form id="inputAddForm" class="form-inline text-left margin-top-2">
+                    <div class="form-group">
+                      <label for="animal">Animal:</label>
+                      <input type="text" class="form-control input-sm" id="inputAnimal">
+                    </div>
+                    <div class="form-group">
+                      <label for="quantity">Quantity:</label>
+                      <input type="number" class="form-control input-sm" id="inputQuantity">
+                    </div>
+                    <input class="btn btn-default" type="button" name="addButton" id="addAnimalButton" value="Add Animal(s) to the zoo!">
+                  </form>
+                </div>
+                  
+                <div id="inputEditForm" class="hidden">
+                  <form class="form-inline text-left">
+                    <div class="form-group">
+                      <label for="animal">Animal:</label>
+                      <input type="text" class="form-control input-sm" id="editAnimal">
+                    </div>
+                    <div class="form-group">
+                      <label for="quantity">Quantity:</label>
+                      <input type="number" class="form-control input-sm" id="editQuantity">
+                    </div>
+                    <input class="btn btn-default" type="button" name="editButton" value="Edit your animal!">
+                  </form>
+                </div>
+                
+                <div class="margin-top-2"></div>
+
+              </div>
+              
+            </div>
+
+          </div>
+        </article>
+
+      </main>
+
+      <footer>
+        &copy; Joan Williams 2016 | <a href="https://github.com/jel04h">https://github.com/jel04h</a> | <a href="mailto:joanlinw@gmail.com">joanlinw@gmail.com</a> | <a href="https://www.pce.uw.edu/courses/application-programming-interfaces-apis">HTML5 Application-Programming Interfaces Class</a>, <a href="http://shielded-sea-3725.herokuapp.com/Lectures/Introduction.html">Instructor: David M. Anderson</a> | <a href="https://www.pce.uw.edu/">UW Continuing Education</a> | <a href="https://www.pce.uw.edu/certificates/html5-css3-responsive-design-web-development">HTML5 CSS3 Responsive Design and Web Development Certification</a> | <a href="https://www.linkedin.com/in/mwillia">I also happened to be married to a Software Engineer...</a>
+      </footer>
+
+    </div>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="js/js.js"></script>
+  </body>
+</html>
