@@ -1,7 +1,8 @@
 (function () {'use strict';
            
 //objects              
-  var theAnimal = $("#inputAnimal").val
+  var theAnimal = $("#inputAnimal").val();
+  var theQuantity = $("#inputQuantity").val();
               
 //toggle forms on and off
   $("#addAnimalToggle").click(function() {
